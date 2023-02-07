@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyNr+ktmPW91ypvrJohDitbn"
+      "authorship_tag": "ABX9TyNyHorqA2uZMqztRx5mF81m"
     },
     "kernelspec": {
       "name": "python3",
@@ -16,31 +16,23 @@
   },
   "cells": [
     {
-      "cell_type": "markdown",
-      "source": [
-        "<!DOCTYPE html>\n",
-        "<html>\n",
-        "    <head>\n",
-        "        <title>Github web page</title>\n",
-        "    </head>\n",
-        "    <body>\n",
-        "\t<h1>Hello!</h1>\n",
-        "\t<h3>Welcome</h3>\n",
-        "    </body>\n",
-        "</html>"
-      ],
+      "cell_type": "code",
+      "execution_count": null,
       "metadata": {
-        "id": "r3kHXKNhHExj"
-      }
-    },
-    {
-      "cell_type": "markdown",
+        "id": "ZXq9LhYXhW8S"
+      },
+      "outputs": [],
       "source": [
-        "homepage"
-      ],
-      "metadata": {
-        "id": "-xdCcdslMSbN"
-      }
+        "import requests\n",
+        "\n",
+        "# 특정 URL에 접속하는 요청(Request) 객체를 생성합니다.\n",
+        "request = requests.get('http://www.dowellcomputer.com/main.jsp')\n",
+        "\n",
+        "# 접속한 이후의 웹 사이트 소스코드를 추출합니다\n",
+        "html = request.text.strip()\n",
+        "\n",
+        "print(html)"
+      ]
     }
   ]
 }
